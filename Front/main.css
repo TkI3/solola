@@ -18,7 +18,8 @@ body{
 }
 
 /*LOGO*/
-.logo-sur-barre{align-items:center;width: 10%;}
+.logo-sur-barre{align-items:center;width: 10%; }
+
 
 .logo-sur-barre img{ 
   width: 100%;
@@ -105,14 +106,12 @@ body{
 
 /*BARRE DE FILTRE */
 .filter-bar {
-  display: none;
-  gap: 10px;
+  display: flex;
   width: 100%;
-  justify-content: center;
-  padding: 10px 0px;
+  padding: 10px 20px;
   background-color: var(--ink);
-
   border: 1px solid var(--yellow-white);
+  align-items: center;
 }
 
 .filter {
@@ -131,6 +130,15 @@ body{
   
   color: #ffc107;
 
+}
+
+select{
+  margin:0px 10px ;
+}
+
+
+.categorieDfiltre{
+  display: inline;
 }
 
 

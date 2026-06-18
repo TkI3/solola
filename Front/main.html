@@ -17,7 +17,7 @@
     <nav id="NavBar">
 
         <div class="logo-sur-barre">
-            <img src="assets/logo-text-classique.png" alt="SOLOLA" />  
+            <img id="logos" src="assets/logo-text-classique.png" alt="SOLOLA" />  
         </div>
 
         <div class="search">
@@ -38,17 +38,33 @@
     </nav>
 
     <nav class="filter-bar">
-        <button class="filter active">Nioso</button>
-        <button class="filter">450</button>
-        <button class="filter">Populaires</button>
-        <button class="filter">Promo</button>
+        
+        <select id="select">
+            <option value="parLocalisation">Localisation</option>
+            <option value="parClassique">prix</option>
+        </select>
 
-        <button class="filter">Nouveaux</button>
-        <button class="filter">Populaires</button>
-        <button class="filter">Promo</button>
-        <button class="filter">Nouveaux</button>
-        <button class="filter">Populaires</button>
-        <button class="filter">Promo</button>
+        
+            <div class="categorieDfiltre" id="parLocalisation">
+                <button class="filter active">Nioso</button>
+                <button class="filter">Gombe</button>
+                <button class="filter">Kamalondo</button>
+                <button class="filter">Katindo</button>
+                <button class="filter">Ibanda</button>
+                <button class="filter">Nzanza</button>
+                <button class="filter">Kasa-Vubu</button>
+                <button class="filter">Kenya</button>
+                <button class="filter">Virunga</button>
+                <button class="filter">Kadutu</button>
+                <button class="filter">Mvuzi</button>
+            </div>
+
+            <div class="categorieDfiltre" id="parClassique" style="display: none;"> 
+                <button class="filter">Nioso</button>
+                <button class="filter">450 Fc</button>
+            </div>
+
+
     </nav>
 
     </header>
