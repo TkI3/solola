@@ -17,7 +17,8 @@ async function chargeannonces() {
         <div class="cnt_img"><img src="assets/${image_link}" alt="${titre}" loading="lazy">
           <button class="fav"><i class="fas fa-heart"></i></button>
         </div>
-        <div class="info"><p class="titre">${titre}</p><p id="prix">${prix} Fc</p>
+        <p id="prix">${prix}</p>
+        <div class="info"><p class="titre">${titre}</p>
           <p class="locate"><i class="fas fa-crosshairs"></i> ${localisation}</p></div>
       </div>`;
 
@@ -41,7 +42,7 @@ function filtrage(){
       carte.style.display = "block";
 
     }else{
-      carte.style.display = prix == filtre_actif ?  "block" : "none";
+      carte.style.display = prix === filtre_actif ?  "block" : "none";
     }
     
 
