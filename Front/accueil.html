@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Solola — Achetez, Vendez, Échangez à Kinshasa</title>
+<meta name="description" content="La marketplace entre particuliers à Kinshasa." />
+
+
+<link rel="stylesheet" href="/accueil.css" />
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<!--presentation-->
+<section class="presentation">
+
+  <div class="bande-de-coter"></div>
+
+  <div class="conteneur">
+
+    <!--barre de navigation-->
+    <header class="navigation">
+      <div class="logo">
+        <img src="assets/logo-clasique.png" alt="SOLOLA" />
+        <span>SOLOLA</span>
+      </div>
+      <nav class="nav-links">
+        <a href="accueil.html" class="active">Accueil</a>
+        <a href="main.html">Annonces</a>
+        <a href="#">Catégories</a>
+        <a href="Connexion.html">Connexion</a>
+        <a href= "#apropos">À propos</a>
+      </nav>
+      <div class="nav-icons">
+        <div class="bell"><i class="fas fa-bell"></i><span class="badge">3</span>
+        </div><i class="fas fa-heart hide-sm"></i>
+        <div class="avatar"><i class="fas fa-user"></i></div>
+      </div>
+    </header>
+    <!--barre de navigation-->
+
+
+    <div class="contenue-grid">
+      <div class="contenue-text">
+        <h1>Achetez<br>Vendez<br>Echangez.</h1>
+        <p class="lead">Entre particuliers à Kinshasa.</p>
+
+        <div class="search">
+          <input type="text" placeholder="Rechercher un produit, une catégorie, une ville..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn-dark"><span class="plus"><i class="fas fa-plus"></i></span>Déposer une annonce</button>
+          <button class="btn-outline" onclick="window.location.href='main.html'"><i class="fas fa-th"></i>Parcourir les annonces</button>
+        </div>
+
+        <div class="features" style="margin-top: 50px;">
+          <div><i class="fas fa-users"></i><div><b>100%</b><span>Entre particuliers</span></div></div>
+          <div><i class="fas fa-shield"></i><div><b>Simple</b><span>Sûr et fiable</span></div></div>
+          <div><i class="fas fa-map-pin"></i><div><b>Local</b><span>Près de chez vous</span></div></div>
+        </div>
+      </div>
+
+      <div class="contenue-illstr">
+        <img src="assets/Illu-Shop.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+ 
+<section class="section">
+  <div class="section-head">
+    <h2>Catégories populaires</h2>
+    <a href="#">Voir toutes les catégories <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="cats" id="cats"></div>
+</section>
+
+<!-- RECENTS -->
+<section class="section">
+  <div class="section-head">
+    <h2>Produits récents</h2>
+    <a href="#">Voir tout <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products" id="recents"></div>
+</section>
+
+<!-- DEALS -->
+<section class="section">
+  <div class="section-head">
+    <h2>Bons plans près de chez vous</h2>
+    <a href="#">Voir tout <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products" id="deals"></div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer id="apropos">
+  <div class="bande-de-coter" style="background-color: var(--yellow);"></div>
+  <div class="footer-grid">
+    <div>
+      <div class="logo logo-light"><img src="assets/logo-clasique.png" alt=""><span>SOLOLA</span></div>
+      <p class="muted">Notre communauté,<br>nos échanges.</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fas fa-phone"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>À propos</h4>
+      <ul><li>Qui sommes-nous ?</li><li>Comment ça marche ?</li><li>Sécurité</li><li>Blog</li></ul>
+    </div>
+    <div>
+      <h4>Aide & Support</h4>
+      <ul><li>Centre d'aide</li><li>Nous contacter</li><li>Conseils de sécurité</li><li>FAQ</li></ul>
+    </div>
+    <div>
+      <h4>Légal</h4>
+      <ul><li>Conditions d'utilisation</li><li>Politique de confidentialité</li><li>Mentions légales</li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><i class="fas fa-phone"></i> +243 97 91 42 741</li>
+        <li><i class="fas fa-envelope"></i> contact@solola.cd</li>
+        <li><i class="fas fa-map-pin"></i> Kinshasa, RDC</li>
+      </ul>
+    </div>
+  </div>
+  <p class="copy">© 2026 SOLOLA. Tous droits réservés.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* variable et code couleur du projet (PAS MODIFIER SVP)*/
+
+:root{
+
+  --yellow: #ffd200;
+  --yellow-dark:#e8bd1e;
+  --yellow-white: #ffffb3;
+  --ink:#191919;
+  --white:#fff;
+  --muted:#6b6b6b;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+body{
+  background-color: #ffffd3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+
+/* Logo en texte accopagnee de l'image*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.logo span {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+

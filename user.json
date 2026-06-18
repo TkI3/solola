@@ -1,0 +1,68 @@
+[
+  {
+    "nom": "Trophee",
+    "postNom": "djunga",
+    "prenom": "konde",
+    "born": "2026-06-17",
+    "district": "Matadi",
+    "commune": "Bukavu",
+    "tel": "0979142741",
+    "motdepasse": "123",
+    "motdepasseVerif": "123"
+  },
+  {
+    "nom": "Emmanuel",
+    "postNom": "Bampa",
+    "prenom": "Nexo",
+    "born": "2007-05-17",
+    "district": "Matadi",
+    "commune": "Matadi",
+    "tel": "0899194112",
+    "motdepasse": "volt",
+    "motdepasseVerif": "volt"
+  },
+  {
+    "nom": "May",
+    "postNom": "Brayan",
+    "prenom": "Brayan",
+    "born": "2026-06-17",
+    "district": "Kinshasa",
+    "commune": "Kinshasa",
+    "tel": "0906492433",
+    "motdepasse": "1234",
+    "motdepasseVerif": "1234"
+  },
+  {
+    "nom": "mukwakungu",
+    "postNom": "yohan",
+    "prenom": "chris",
+    "born": "2026-06-01",
+    "district": "Bukavu",
+    "commune": "Bukavu",
+    "tel": "0972693813",
+    "motdepasse": "",
+    "motdepasseVerif": ""
+  },
+  {
+    "nom": "mukwakungu",
+    "postNom": "",
+    "prenom": "chris",
+    "born": "",
+    "district": "Bukavu",
+    "commune": "Matadi",
+    "tel": "0972693813",
+    "motdepasse": "chrismuk",
+    "motdepasseVerif": "chrismuk"
+  },
+  {
+    "nom": "Audrey",
+    "postNom": "Kishilo",
+    "prenom": "Bwanahali",
+    "born": "2026-06-19",
+    "district": null,
+    "commune": "Goma",
+    "tel": "0822763951",
+    "motdepasse": "drey4",
+    "motdepasseVerif": "drey4"
+  }
+]

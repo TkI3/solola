@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Connexionn.css">
+    <title>Solola-Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+     
+    <div class="cnt">
+
+        <div class="deco">
+            <i class="fas fa-user" id="icon_user"></i>
+            <h1>Creer un compte</h1>
+            <h4 style="font-weight: normal;color: grey;">Maloba na yo nde ezo pesa talo</h4>
+        </div>
+        
+        <section class="formulaire">
+          <div class="auth-card">
+            <h1>Bon retour !</h1>
+            <p class="sub">Connectez-vous pour gérer vos annonces.</p>
+
+            <form action="/auth" method="POST">
+              <div class="field">
+                <label>Email ou téléphone</label>
+                <div class="with-ic"><i class="lc lc-user"></i><input required type="text" placeholder="vous@exemple.cd" name="numero" /></div>
+              </div>
+              <div class="field">
+                <label>Mot de passe</label>
+                <div class="with-ic"><i class="lc lc-lock"></i><input required type="password" placeholder="••••••••" name="motdepasse" /></div>
+              </div>
+              <div class="row-between">
+                <label class="check"><input type="checkbox" /> Se souvenir</label>
+                <a href="#" style="font-weight:600">Mot de passe oublié ?</a>
+              </div>
+              <button type="submit" class="btn-dark btn-block">Se connecter</button>
+
+              <div class="divider">ou continuer avec</div>
+              <div class="social-btns">
+                <button type="button" class="social-btn"><i class="lc lc-chrome"></i>Google</button>
+                <button type="button" class="social-btn"><i class="lc lc-facebook"></i>Facebook</button>
+              </div>
+              
+            </form>
+      <p class="auth-foot">Nouveau sur SOLOLA ? <a href="inscription.html">Créer un compte</a></p>
+          </div>
+        </section>
+    </div>
+
+</body>
+</html>

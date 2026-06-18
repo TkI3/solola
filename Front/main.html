@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Solola-Articles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <header style="position: sticky; top: 0; z-index: 100;">
+
+    <nav id="NavBar">
+
+        <div class="logo-sur-barre">
+            <img src="assets/logo-text-classique.png" alt="SOLOLA" />  
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Rechercher un produit, une catégorie, une ville..." />
+            <button ><i class="fas fa-search"></i></button>
+        </div>
+
+        <div id="cnt-icon" style="display:flex;align-items:center;gap: 10px; display:none">
+            <button class="badge"><i class="fas fa-user"></i></button>
+            <button class="badge"><i class="fas fa-bell"></i></button>
+            <button class="badge"><i class="fas fa-heart"></i></button>
+        </div>
+
+        <button class="btn-dark"><span class="plus"><i class="fas fa-plus"></i></span>Déposer une annonce</button>
+        <button class="btn-dark" id="login"><i class="fas fa-user"></i>Se connecter</button>
+
+
+    </nav>
+
+    <nav class="filter-bar">
+        <button class="filter active">Nioso</button>
+        <button class="filter">450 Fc</button>
+        <button class="filter">Populaires</button>
+        <button class="filter">Promo</button>
+
+        <button class="filter">Nouveaux</button>
+        <button class="filter">Populaires</button>
+        <button class="filter">Promo</button>
+        <button class="filter">Nouveaux</button>
+        <button class="filter">Populaires</button>
+        <button class="filter">Promo</button>
+    </nav>
+
+    </header>
+
+    
+    <div id="produits"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

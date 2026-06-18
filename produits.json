@@ -1,0 +1,92 @@
+[
+  {
+    "nomProduit": "Chaussures Nike Air",
+    "prix": 120,
+    "etat": "Neuf",
+    "photo": "https://exemple.com/images/nike-air.jpg",
+    "district": "Kinshasa",
+    "commune": "Gombe",
+    "vendeur": "Patrick"
+  },
+  {
+    "nomProduit": "Téléphone Samsung Galaxy S21",
+    "prix": 450,
+    "etat": "Occasion",
+    "photo": "https://exemple.com/images/galaxy-s21.jpg",
+    "district": "Lubumbashi",
+    "commune": "Kamalondo",
+    "vendeur": "Amina"
+  },
+  {
+    "nomProduit": "Ordinateur Portable Dell",
+    "prix": 600,
+    "etat": "Neuf",
+    "photo": "https://exemple.com/images/dell-laptop.jpg",
+    "district": "Goma",
+    "commune": "Katindo",
+    "vendeur": "Jean"
+  },
+  {
+    "nomProduit": "Canapé en cuir",
+    "prix": 300,
+    "etat": "Occasion",
+    "photo": "https://exemple.com/images/canape-cuir.jpg",
+    "district": "Bukavu",
+    "commune": "Ibanda",
+    "vendeur": "Chantal"
+  },
+  {
+    "nomProduit": "Vélo de montagne",
+    "prix": 200,
+    "etat": "Neuf",
+    "photo": "https://exemple.com/images/velo-montagne.jpg",
+    "district": "Matadi",
+    "commune": "Nzanza",
+    "vendeur": "David"
+  },
+  {
+    "nomProduit": "Sac à main Louis Vuitton",
+    "prix": 800,
+    "etat": "Occasion",
+    "photo": "https://exemple.com/images/sac-vuitton.jpg",
+    "district": "Kinshasa",
+    "commune": "Kasa-Vubu",
+    "vendeur": "Sarah"
+  },
+  {
+    "nomProduit": "Table en bois massif",
+    "prix": 150,
+    "etat": "Neuf",
+    "photo": "https://exemple.com/images/table-bois.jpg",
+    "district": "Lubumbashi",
+    "commune": "Kenya",
+    "vendeur": "Michel"
+  },
+  {
+    "nomProduit": "Téléviseur LG 55 pouces",
+    "prix": 700,
+    "etat": "Neuf",
+    "photo": "https://exemple.com/images/lg-tv.jpg",
+    "district": "Goma",
+    "commune": "Virunga",
+    "vendeur": "Joseph"
+  },
+  {
+    "nomProduit": "Moto Honda 125cc",
+    "prix": 1200,
+    "etat": "Occasion",
+    "photo": "https://exemple.com/images/moto-honda.jpg",
+    "district": "Bukavu",
+    "commune": "Kadutu",
+    "vendeur": "Eric"
+  },
+  {
+    "nomProduit": "Réfrigérateur Samsung",
+    "prix": 500,
+    "etat": "Neuf",
+    "photo": "https://exemple.com/images/frigo-samsung.jpg",
+    "district": "Matadi",
+    "commune": "Mvuzi",
+    "vendeur": "Nadine"
+  }
+]

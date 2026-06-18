@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Solola-Inscriptions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+    
+    <a href="/accueil.html" class="btn_return" ><i class="fas fa-arrow-left"></i></a>
+
+    <div class="cnt">
+
+        <div class="deco">
+            <i class="fas fa-user-plus" id="icon_user"></i>
+            <h1>Creer un compte</h1>
+            <h4 style="font-weight: normal;color: grey;">Maloba na yo nde ezo pesa talo</h4>
+        </div>
+
+        <form action="/enregistrement" method="POST">
+            
+            <label for="info-perso"> <i class="fas fa-user"></i>Informations personnelles</label>
+
+            <input type="text" name="nom" placeholder="Nom..." class="info_perso" required>
+            <input type="text" name="post-nom" placeholder="post-nom... " class="info_perso">
+            <input type="text" name="prenom" placeholder="Prenom..." class="info_perso" required>
+            <input type="date" name="born" class="info_perso">
+
+            <label for="localisation"><i class="fas fa-map"></i>Localisation</label>
+
+            <select required name="d
+            istrict">
+                <option value="">District</option>
+                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+            </select>
+
+            <select required name="commune">
+                <option value="">Commune</option> <!--Add event listener here -->
+                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+            </select>
+
+            <label for="Contact"><i class="fas fa-phone"></i> Numero de telephone</label>
+
+            <input type="tel" name="tel" placeholder="+243 97 91 42 741" required >
+
+            <label for="securite"><i class="fas fa-lock"></i>Securiter</label>
+            <input type="password" name="motdepasse" placeholder="Mot de passe" required>
+            <input type="password" name="motdepasse_verif" placeholder="Mot de passe" required>
+
+            <button type="submit" class="btn_submit"> Creer mon compte <i class="fas fa-arrow-right"></i></button>
+
+            <p>Deja inscrit ? <a href="/connexion.html">Se connecter</a></p>
+        
+
+        </form>
+
+        
+    </div>
+
+
+</body>
