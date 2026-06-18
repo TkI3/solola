@@ -1,12 +1,6 @@
 import { serve, file } from "bun";
 import { existsSync } from "fs";
 import { readFile, writeFile } from "node:fs/promises";
-
-function errorpage(txt){
-
-          
-}
-
 serve({
 
   port: 3000,
@@ -135,7 +129,7 @@ serve({
       }
     }
 
-    return new Response("404 - Page non trouvée", { status: 404 });
+    return new Response(file("Front/404.html"), { status: 404 });
 
     
   },

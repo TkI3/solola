@@ -14,11 +14,11 @@ async function chargeannonces() {
 
     contenair.innerHTML +=
       `<div class="carte_produit">
+        <p style="display: none">${prix}</p>
         <div class="cnt_img"><img src="assets/${image_link}" alt="${titre}" loading="lazy">
           <button class="fav"><i class="fas fa-heart"></i></button>
         </div>
-        <p id="prix">${prix}</p>
-        <div class="info"><p class="titre">${titre}</p>
+        <div class="info"><p class="titre">${titre}</p><p class="prix">${prix} Fc</p>
           <p class="locate"><i class="fas fa-crosshairs"></i> ${localisation}</p></div>
       </div>`;
 
@@ -36,7 +36,7 @@ function filtrage(){
 
   all_carte.forEach(carte => {
 
-    const prix = carte.getElementById("prix").textContent;
+    const prix = carte.querySelector("p").textContent;
       
     if(filtre_actif === "Nioso"){
       carte.style.display = "block";
@@ -45,7 +45,6 @@ function filtrage(){
       carte.style.display = prix === filtre_actif ?  "block" : "none";
     }
     
-
   })
 }
 
@@ -62,8 +61,7 @@ filters.forEach(btn => {
       filtrage(); 
     }
   )
-
-      
+  
 });
 
 
