@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inscription.css">
-    <link rel="stylesheet" href="style.css">
     <title>Solola-Inscriptions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <script>
         setTimeout(() => { window.location.href = "/main.html";}, 3000);
@@ -15,7 +12,6 @@
 </head>
 
 <body>
-
 
     <div class="cnt">
 
@@ -30,15 +26,44 @@
         
     </div>
 
-    <style>
+      <style>
 
         body{
             height: 100vh;
             margin: 0px;
+            background-image: url("assets/image-de-fonds.png");
+            object-fit: cover;   
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
+
+        .cnt{
+
+            background-color: white;
+            width: 50vw;
+            height: fit-content;
+
+            padding: 30px 100px;
+            border-radius:38px ;
+
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.589);
+        }
+
+        .deco{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            
+            margin-bottom: 20px;
+        }
+
         h1{
             margin: 40px 0px 0px  0px;
-            color: greenyellow;
+            color: rgb(255, 47, 47);
+            font-size: 5rem
         }
 
         p{
