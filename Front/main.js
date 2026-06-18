@@ -15,7 +15,7 @@ async function chargeannonces() {
     contenair.innerHTML +=
       `<div class="carte_produit">
         <p style="display: none">${prix}</p>
-        <div class="cnt_img"><img src="assets/${image_link}" alt="${titre}" loading="lazy">
+        <div class="cnt_img"><img src="${image_link}" alt="${titre}" loading="lazy">
           <button class="fav"><i class="fas fa-heart"></i></button>
         </div>
         <div class="info"><p class="titre">${titre}</p><p class="prix">${prix} Fc</p>

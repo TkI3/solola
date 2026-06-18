@@ -13,17 +13,14 @@ serve({
 
     if (url.pathname === "/auth" && req.method === "POST") {
       try {
-        // Récupérer les données du formulaire
+        
         const formDatas = await req.formData();
         const tel = formDatas.get("numero");
         const motdepasse = formDatas.get("motdepasse");
         
-
-        // Charger le fichier JSON
         const usersFile = await readFile("./user.json", "utf-8");
         const users = JSON.parse(usersFile);
 
-        // Vérifier si l'utilisateur existe
         const found = users.find(
           (u) => u.tel === tel && u.motdepasse === motdepasse
         );
@@ -112,7 +109,7 @@ serve({
 
       // Lecture du fichier prouitsa
       
-        const filee = file("./produits.json");
+        const filee = file("./annonces.json");
 
         const data = await filee.json();
 
