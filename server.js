@@ -1,4 +1,4 @@
-import { serve, file } from "bun";
+import { serve, file , write } from "bun";
 import { existsSync } from "fs";
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -6,6 +6,12 @@ serve({
 
   port: 3000,
   hostname: "localhost",
+  
+
+  routes:{
+    
+    "/Annonces-img/*": req => {const url = new URL(req.url); return new Response(file(`.${url.pathname}`))},
+  },
 
   async fetch(req) {
 
@@ -117,7 +123,58 @@ serve({
 
     }
 
-    else{
+    else if(url.pathname === "/upload"){
+
+      const Datas = await req.formData();
+      const img = Datas.getAll("images");
+
+      //extraction des donnees du formulaire recu dans la requete
+        const titre = Datas.get("titre");
+        const prix = Datas.get("prix");
+        const categorie = Datas.get("categorie");
+        const district = Datas.get("district"); 
+        const commune = Datas.get("commune");   
+        const description = Datas.get("description");
+        const preview = `/Annonces-img/${titre}-1.png`;
+        
+
+      //Enregistrement des images recu
+        let i  = 0 ;
+        img.forEach( img_recu => {
+          write(`Annonces-img/${titre.replace(" ","-")}-${i}.png`,img_recu);
+          i++;
+        });
+
+      //Creation de l'annonce  
+        const newAnc = {
+          titre,
+          prix,
+          categorie,
+          district,
+          commune,
+          description,
+          preview
+        };
+
+      // Lecture du fichier d'annonce
+        let users = [];
+        const file = await readFile("./annonces.json", "utf-8");
+        users = JSON.parse(file);
+        console.log(" fichier lu ? (ok)");
+
+
+        // Ajout de la nouvelle annonce 
+          users.unshift(newUser);
+          console.log("Annonces cree:\n--------------");
+          console.log(users)
+
+        // Sauvegarde dans annonces.json 
+        await writeFile("./annonces.json", JSON.stringify(users),"utf-8");
+
+      return new Response("ok") ;
+    }
+
+    else {
 
       let path = url.pathname === "/" ? "/accueil.html" : url.pathname;
       const filePath = "Front" + path;

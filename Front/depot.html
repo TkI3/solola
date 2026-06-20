@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="depot.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Solola-Depot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+    
+    <a href="/accueil.html" class="btn_return" ><i class="fas fa-arrow-left"></i></a>
+
+     <div class="cnt">
+
+        <div class="deco">
+            <i class="fa-solid fa-bullhorn" id="icon_sheet"></i>
+            <h1>Deposer une annonce <br><i style="font-weight: normal;color: grey;font-size: small;"> Maloba na yo nde ezo pesa talo</i> </h1>
+           
+        </div>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <label>Titre de l'annonce</label>
+            <input type="text" name="titre" placeholder="Titre" >
+
+            <label>Prix (Fc)</label>
+            <input type="number" name="prix" placeholder="Prix en Fc " id="prix">
+
+            <select required name="catgorie">
+                <option value="">District</option>
+                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+            </select>
+
+            <label>Localisation</label>
+            <select required name="district">
+                <option value="">District</option>
+                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+            </select>
+
+            <select required name="commune">
+                <option value="">Commune</option>
+                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+            </select>
+
+            <textarea id="description" name="description" placeholder="Décris l'état, l'année, les défauts, etc."></textarea>
+
+            <input id="File_1" name="images" type="file" accept="image/*" required multiple style="display : none">
+
+            <button type="submit" class="btn_submit"> Enregistrer l'annonce <i class="fas fa-arrow-right"></i></button>        
+
+        </form>
+
+        
+    </div>
+
+    <div class="cnt" id="love">
+
+        <h2>Importer une Image</h2>
+
+        <div class="image-card">
+        
+        <div class="main-preview" id="mainPreview" tabindex="0" role="button" aria-label="Cliquer pour ajouter des images">
+          <div class="placeholder" id="mainPlaceholder">
+            <i class="fa-solid fa-image" style="font-size:36px"></i>
+            <div style="margin-top:8px;font-weight:600">Ajouter des photos</div>
+            <div style="font-size:12px">Cliquez ici ou glissez-déposez (max 6)</div>
+          </div>
+        </div>
+
+        
+        <div class="thumbs" id="thumbsContainer"></div>
+      </div>
+
+        
+    </div>
+
+    <script src="depot.js"></script>
+</body>
+</html>
