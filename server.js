@@ -2,20 +2,31 @@ import { serve, file , write } from "bun";
 import { existsSync } from "fs";
 import { readFile, writeFile } from "node:fs/promises";
 
+let id_compt = Date.now(); 
+
+function getAnId(){
+  id_compt++;
+  console.log(id_compt);
+  return id_compt;
+}
+
 serve({
 
   port: 3000,
   hostname: "localhost",
   
 
+  
+
   routes:{
     
-    "/Annonces-img/*": req => {const url = new URL(req.url); return new Response(file(`.${url.pathname}`))},
+    "/Annonces-img/*": req => {const url = new URL(req.url);  return new Response(file(`.${url.pathname}`))},
   },
 
   async fetch(req) {
 
-    const url = new URL(req.url); 
+    const url = new URL(req.url);
+    
 
     if (url.pathname === "/auth" && req.method === "POST") {
       try {
@@ -129,13 +140,15 @@ serve({
       const img = Datas.getAll("images");
 
       //extraction des donnees du formulaire recu dans la requete
+        const id = getAnId();
         const titre = Datas.get("titre");
         const prix = Datas.get("prix");
         const categorie = Datas.get("categorie");
         const district = Datas.get("district"); 
         const commune = Datas.get("commune");   
         const description = Datas.get("description");
-        const preview = `/Annonces-img/${titre.replaceAll(" ","-")}-0.png`;
+        const preview = `/Annonces-img/${id}-0.png`;
+        
         
 
       //Enregistrement des images recu
@@ -143,14 +156,15 @@ serve({
         img.forEach( img_recu => {
 
           if( i < 3 ){
-          write(`Annonces-img/${titre.replaceAll(" ","-")}-${i}.png`,img_recu);
-          i++;
+            write(`Annonces-img/${id}-${i}.png`,img_recu);
+            i++;
           }
           
         });
 
       //Creation de l'annonce  
         const newAnc = {
+          id,
           titre,
           prix,
           categorie,
