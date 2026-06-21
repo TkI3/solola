@@ -25,25 +25,57 @@
         <form action="/upload" method="POST" enctype="multipart/form-data">
 
             <label>Titre de l'annonce</label>
-            <input type="text" name="titre" placeholder="Titre" >
+            <input type="text" name="titre" placeholder="Titre" required >
 
             <label>Prix (Fc)</label>
-            <input type="number" name="prix" placeholder="Prix en Fc " id="prix">
+            <input type="number" name="prix" placeholder="Prix en Fc " id="prix" required>
 
-            <select required name="catgorie">
-                <option value="">District</option>
-                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+            <select id="categorie" name="categorie" required>
+                <option value="">catégorie</option>
+                <option value="vetement">Elamba (Vêtements)</option>
+                <option value="animaux">Niama (Animaux)</option>
+                <option value="telephone">Telephone (Téléphone)</option>
+                <option value="appareils">Appareils</option>
+                <option value="chaussures">Chaussures</option>
             </select>
 
             <label>Localisation</label>
-            <select required name="district">
+           
+            <select id="district" name="district" required>
                 <option value="">District</option>
-                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+                <option value="Lukunga">Lukunga</option>
+                <option value="Funa">Funa</option>
+                <option value="Mont-Amba">Mont-Amba</option>
+                <option value="Tshangu">Tshangu</option>
             </select>
 
-            <select required name="commune">
+
+            <select id="commune" name="commune" required>
                 <option value="">Commune</option>
-                <option>Kinshasa</option><option>Lubumbashi</option><option>Goma</option><option>Bukavu</option><option>Matadi</option>
+                <option value="Bandalungwa">Bandalungwa</option>
+                <option value="Barumbu">Barumbu</option>
+                <option value="Bumbu">Bumbu</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Kalamu">Kalamu</option>
+                <option value="Kasa-Vubu">Kasa-Vubu</option>
+                <option value="Kimbanseke">Kimbanseke</option>
+                <option value="Kinshasa">Kinshasa</option>
+                <option value="Kintambo">Kintambo</option>
+                <option value="Kisenso">Kisenso</option>
+                <option value="Lemba">Lemba</option>
+                <option value="Limete">Limete</option>
+                <option value="Lingwala">Lingwala</option>
+                <option value="Makala">Makala</option>
+                <option value="Maluku">Maluku</option>
+                <option value="Masina">Masina</option>
+                <option value="Matete">Matete</option>
+                <option value="Mont-Ngafula">Mont-Ngafula</option>
+                <option value="Ndjili">Ndjili</option>
+                <option value="Ngaba">Ngaba</option>
+                <option value="Ngaliema">Ngaliema</option>
+                <option value="Ngiri-Ngiri">Ngiri-Ngiri</option>
+                <option value="Nsele">Nsele</option>
+                <option value="Selembao">Selembao</option>
             </select>
 
             <textarea id="description" name="description" placeholder="Décris l'état, l'année, les défauts, etc."></textarea>
