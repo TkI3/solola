@@ -1,7 +1,7 @@
 
 body{
   overflow-y: scroll;
-  background-color: #d1d1d1;
+  background-color: var(--);
 }
 
 #NavBar{
@@ -138,7 +138,11 @@ select{
 
 
 .categorieDfiltre{
-  display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
 }
 
 
@@ -149,8 +153,9 @@ select{
   gap: 20px;
   justify-content: space-around;
   margin: 70px;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(4,1fr);
   background-color: transparent;
+  
 }
 
 
@@ -214,7 +219,7 @@ select{
   margin-top: 4px;
 }
 
-.carte_produit .info .locate {
+.carte_produit .info .localisation {
   font-size: 12px;
   color: var(--muted);
   margin-top: 4px;

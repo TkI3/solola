@@ -31,7 +31,7 @@
             <button class="badge"><i class="fas fa-heart"></i></button>
         </div>
 
-        <button class="btn-dark"><span class="plus"><i class="fas fa-plus"></i></span>Déposer une annonce</button>
+        <button class="btn-dark" id="depot"><span class="plus"><i class="fas fa-plus"></i></span>Déposer une annonce</button>
         <button class="btn-dark" id="login"><i class="fas fa-user"></i>Se connecter</button>
 
 
@@ -40,30 +40,15 @@
     <nav class="filter-bar">
         
         <select id="select">
-            <option value="parLocalisation">Localisation</option>
-            <option value="parClassique">prix</option>
+            <option value="">Pas de filtre</option>
+            <option value="parCategorie">Categorie</option>
+            <option value="parLocalisation">Commune</option>
+            <option value="parDistrict">District</option>
         </select>
-
         
-            <div class="categorieDfiltre" id="parLocalisation">
-                <button class="filter active">Nioso</button>
-                <button class="filter">Gombe</button>
-                <button class="filter">Kamalondo</button>
-                <button class="filter">Katindo</button>
-                <button class="filter">Ibanda</button>
-                <button class="filter">Nzanza</button>
-                <button class="filter">Kasa-Vubu</button>
-                <button class="filter">Kenya</button>
-                <button class="filter">Virunga</button>
-                <button class="filter">Kadutu</button>
-                <button class="filter">Mvuzi</button>
-            </div>
-
-            <div class="categorieDfiltre" id="parClassique" style="display: none;"> 
-                <button class="filter">Nioso</button>
-                <button class="filter">450 Fc</button>
-            </div>
-
+        <div class="categorieDfiltre" id="parLocalisation" style="display: none;"><button class="filter">Nionso</button></div>
+        <div class="categorieDfiltre" id="parCategorie" style="display: none;"><button class="filter">Nionso</button></div>
+        <div class="categorieDfiltre" id="parDistrict" style="display: none;"><button class="filter">Nionso</button></div>
 
     </nav>
 
