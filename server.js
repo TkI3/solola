@@ -135,14 +135,18 @@ serve({
         const district = Datas.get("district"); 
         const commune = Datas.get("commune");   
         const description = Datas.get("description");
-        const preview = `/Annonces-img/${titre}-1.png`;
+        const preview = `/Annonces-img/${titre.replaceAll(" ","-")}-0.png`;
         
 
       //Enregistrement des images recu
         let i  = 0 ;
         img.forEach( img_recu => {
-          write(`Annonces-img/${titre.replace(" ","-")}-${i}.png`,img_recu);
+
+          if( i < 3 ){
+          write(`Annonces-img/${titre.replaceAll(" ","-")}-${i}.png`,img_recu);
           i++;
+          }
+          
         });
 
       //Creation de l'annonce  
@@ -157,19 +161,19 @@ serve({
         };
 
       // Lecture du fichier d'annonce
-        let users = [];
+        let annonces = [];
         const file = await readFile("./annonces.json", "utf-8");
-        users = JSON.parse(file);
+        annonces = JSON.parse(file);
         console.log(" fichier lu ? (ok)");
 
 
         // Ajout de la nouvelle annonce 
-          users.unshift(newUser);
+          annonces.unshift(newAnc);
           console.log("Annonces cree:\n--------------");
-          console.log(users)
+          console.log(annonces)
 
         // Sauvegarde dans annonces.json 
-        await writeFile("./annonces.json", JSON.stringify(users),"utf-8");
+        await writeFile("./annonces.json", JSON.stringify(annonces),"utf-8");
 
       return new Response("ok") ;
     }

@@ -16,9 +16,7 @@ fileInput.addEventListener('change', (e) => {
 
   const Nb_img = e.target.files.length;
 
-  // Nb_img = Nb_img <= 3 ? "" : 3;
-
-  for (let i=0; i < Nb_img && Nb_img < 4; i++) {
+  for (let i=0; i < Nb_img && i < 3; i++) {
   
     let files = URL.createObjectURL(e.target.files[i]);
     console.log(files);
