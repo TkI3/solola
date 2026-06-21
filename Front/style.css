@@ -1,5 +1,4 @@
 /* variable et code couleur du projet (PAS MODIFIER SVP)*/
-
 :root{
 
   --yellow: #ffd200;
@@ -27,10 +26,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -43,23 +38,20 @@ button {
   background: none;
 }
 
-
-/* Logo en texte accopagnee de l'image*/
-
 .logo {
   display: flex;
   align-items: center;
   gap: 8px;
-}
 
-.logo img {
-  width: 36px;
-  height: 36px;
-}
+  img {
+    width: 36px;
+    height: 36px;
+  }
 
-.logo span {
-  font-weight: 900;
-  font-size: 24px;
-  letter-spacing: -0.02em;
+  span {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+  }
 }
 
