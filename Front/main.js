@@ -30,8 +30,13 @@ async function chargeannonces() {
             </p>
           </div>
       </div>`;
+      
 
-  });
+  })
+
+  document.querySelectorAll(".carte_produit").forEach(carte => carte.addEventListener("click",()=>{fetch(`annonce?id=${carte.dataset.id}`.then(window.location.href = `annonce?id=${carte.dataset.id}`))}));
+  
+  ;
 
 }
 
@@ -100,6 +105,8 @@ function filtrage(){
     carte.style.display = filtre_actif === "Nionso"|| delta.includes(filtre_actif) ? "block" : "none";
   })
 }
+
+
 
 
 document.getElementById("logos").addEventListener("click",() => { window.location.href = "/"})
