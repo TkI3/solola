@@ -10,9 +10,11 @@ function getAnId(){
   return id_compt;
 }
 
+const port= Number(process.env.PORT || 8080);
 serve({
 
-  port: 1300,
+  port,
+  
   //hostname: "localhost",
 
   routes:{
