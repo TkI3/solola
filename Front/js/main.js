@@ -34,7 +34,7 @@ async function chargeannonces() {
 
   })
 
-  document.querySelectorAll(".carte_produit").forEach(carte => carte.addEventListener("click",()=>{fetch(`annonce?id=${carte.dataset.id}`.then(window.location.href = `annonce?id=${carte.dataset.id}`))}));
+  document.querySelectorAll(".carte_produit").forEach(carte => carte.addEventListener("click",()=>{fetch(`/annonce?id=${carte.dataset.id}`.then(window.location.href = `/annonce?id=${carte.dataset.id}`))}));
   
   ;
 
@@ -108,10 +108,9 @@ function filtrage(){
 
 
 
-
-document.getElementById("logos").addEventListener("click",() => { window.location.href = "/"})
-document.getElementById("login").addEventListener('click',() => { window.location.href = "/Connexion.html"})
-document.getElementById("depot").addEventListener("click",() => { window.location.href = "/depot.html"});
+document.getElementById("logos").addEventListener("click",() => { window.location.href = "accueil.html"})
+document.getElementById("login").addEventListener('click',() => { window.location.href = "Connexion.html"})
+document.getElementById("depot").addEventListener("click",() => { window.location.href = "depot.html"});
 document.getElementById("select").addEventListener("change", categorisation);
 
 chargeannonces();

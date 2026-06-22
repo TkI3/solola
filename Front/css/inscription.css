@@ -4,7 +4,7 @@
 
 body{
 
-    background-image: url("assets/image-de-fonds.png");
+    background-image: url("../assets/image-de-fonds.png");
     object-fit: cover;   
     display: flex;
     align-items: center;

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Solola — Annonce #{id}</title>
-<link rel="stylesheet" href="Template.css">
+<link rel="stylesheet" href="../css/Template.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
   <div class="cnt">
     <div class="gallery-info">
       <div class="gallery">
-        <div class="preview" id="preview" style="background-image: url('/Annonces-img/placeholder-0.png');">
+        <div class="preview" id="preview" style="background-image: url('../Annonces-img/placeholder-0.png');">
           <h3 class="counter" id="counter">1 / 1</h3>
         </div>
 
@@ -61,6 +61,8 @@
 
   <script>
     // Données d'exemple (remplace par templating serveur)
+
+    document.documentElement.style.zoom ="1.20";
     const ad = {
       id: '1782004587884',
       title: 'Téléphone Samsung Galaxy',
@@ -71,9 +73,9 @@
       category: 'Téléphone',
       description: 'Téléphone en bon état, batterie 80%, vendu avec chargeur.',
       images: [
-        '/Annonces-img/{id}-0.png',
-        '/Annonces-img/{id}-1.png',
-        '/Annonces-img/{id}-2.png'
+        '../Annonces-img/{id}-0.png',
+        '../Annonces-img/{id}-1.png',
+        '../Annonces-img/{id}-2.png'
       ],
       seller: {
         name: 'Jean Mbala',

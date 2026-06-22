@@ -18,6 +18,7 @@ serve({
   routes:{
     
     "/Annonces-img/*": req => {const url = new URL(req.url);  return new Response(file(`.${url.pathname}`))},
+   
   },
 
   async fetch(req) {
@@ -47,7 +48,7 @@ serve({
         return new Response( null, {
           status:302,
           headers: {
-            "location":"/connexion-reusssi.html",
+            "location":"html/connexion-reusssi.html",
             "Content-Type": "text/html",
             "Set-Cookie": `user=${cookieValue}; HttpOnly; Path=/; Max-Age=3600`
           },
@@ -141,9 +142,13 @@ serve({
       
       let found = annonce_parse.find( anc => anc.id == id);
 
+      if(!found){
+        return new Response(file("Front/html/404.html"), { status: 404 });
+      }
+
       console.log(found);
 
-      let html = await file("./Front/Template.html").text();
+      let html = await file("./Front/html/Template.html").text();
       html = html.replaceAll("{titre}",found.titre);
       html = html.replaceAll("{id}",found.id)
       html = html.replaceAll("{prix}",found.prix);
@@ -215,16 +220,15 @@ serve({
     }
 
     else {
-
-      let path = url.pathname === "/" ? "/accueil.html" : url.pathname;
-      const filePath = "Front" + path;
+      let path = url.pathname === "/" ? "html/accueil.html" : url.pathname;
+      const filePath = "Front/" + path;
       if(existsSync(filePath)){
         return new Response(file(filePath));
         console.log(URL);
       }
     }
 
-    return new Response(file("Front/404.html"), { status: 404 });
+    return new Response(file("Front/html/404.html"), { status: 404 });
 
     
   },

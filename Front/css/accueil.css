@@ -10,7 +10,7 @@ body {
 
 .presentation {
   position: relative;
-  background-image: url("assets/image-de-fonds.png");
+  background-image: url("../assets/image-de-fonds.png");
   object-fit: cover;
   
   .bande-de-coter {
@@ -19,7 +19,7 @@ body {
     left: 0;
     bottom: 0;
     width: 44px;
-    background: url(assets/pattern-vertical.png) repeat-y;
+    background: url(../assets/pattern-vertical.png) repeat-y;
     background-size: 100% auto;
   }
 

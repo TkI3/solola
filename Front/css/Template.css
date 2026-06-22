@@ -15,18 +15,19 @@
     * { box-sizing: border-box; font-family: 'Inter', system-ui, sans-serif; margin: 0px;}
 
     body{
-      background-image: url("assets/image-de-fonds.png");
+      background-image: url("../assets/image-de-fonds.png");
       display: flex;
       height: fit-content;
       align-items: center;
       justify-content: space-evenly;
       flex-direction: column;
       gap: 10px;
+      
     }
 
     .logo{
 
-      background-image: url(assets/logo-text-classique.png);
+      background-image: url(../assets/logo-text-classique.png);
       height: 10vh;
       width: 10vw;
       aspect-ratio: 4 / 4;

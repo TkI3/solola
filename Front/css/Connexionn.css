@@ -1,6 +1,6 @@
 body{
 
-    background-image: url("assets/image-de-fonds.png");
+    background-image: url("../assets/image-de-fonds.png");
     display: flex;
     justify-content: center;
     align-content: center;
@@ -29,6 +29,12 @@ body{
     flex-direction: column;
     width: 40%;
     align-items: center;
+
+    
+    height: 60%;
+    justify-content: center;
+
+    border-right: 1PX SOLID grey;
     
 }
 
@@ -51,7 +57,6 @@ section{
     justify-content: center;
     align-items: center;
 }
-
 
 
 .auth-card{max-width:460px;background:#fff;padding: 52px 0px;width: 100%;}

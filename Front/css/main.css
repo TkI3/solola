@@ -1,7 +1,7 @@
 
 body{
   overflow-y: scroll;
-  background-color: var(--);
+  background-color: var(--yellow-white);
 }
 
 #NavBar{
@@ -13,7 +13,7 @@ body{
   z-index: 100;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.315);
   backdrop-filter: blur(50px);
-  background-image: url("assets/image-de-fonds.png");
+  background-image: url("../assets/image-de-fonds.png");
   align-items: center;
 }
 
