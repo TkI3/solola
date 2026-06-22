@@ -14,9 +14,6 @@ serve({
 
   port: 3000,
   hostname: "localhost",
-  
-
-  
 
   routes:{
     
@@ -131,6 +128,31 @@ serve({
         const data = await filee.json();
 
         return Response.json(data);
+
+    }
+
+    else if(url.pathname === "/annonce"){
+
+      console.log("ok");
+      const id = url.searchParams.get("id");
+
+      let annonces = await readFile("./annonces.json");
+      let annonce_parse = JSON.parse(annonces);
+      
+      let found = annonce_parse.find( anc => anc.id == id);
+
+      console.log(found);
+
+      let html = await file("./Front/Template.html").text();
+      html = html.replaceAll("{titre}",found.titre);
+      html = html.replaceAll("{id}",found.id)
+      html = html.replaceAll("{prix}",found.prix);
+      html = html.replaceAll("{description}",found.description);
+      html = html.replaceAll("{district}",found.district);
+      html = html.replaceAll("{commune}",found.commune);
+
+
+      return new Response(html,{headers:{"content-Type":"html"}})
 
     }
 

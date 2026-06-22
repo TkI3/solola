@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solola — Annonce #{id}</title>
+<link rel="stylesheet" href="Template.css">
+</head>
+<body>
+
+  <div class="logo">#{id}</div>
+
+  <div class="cnt">
+    <div class="gallery-info">
+      <div class="gallery">
+        <div class="preview" id="preview" style="background-image: url('/Annonces-img/placeholder-0.png');">
+          <h3 class="counter" id="counter">1 / 1</h3>
+        </div>
+
+        <div class="thumbs" id="thumbs">
+          <!-- miniatures insérées par JS -->
+        </div>
+      </div>
+
+      <div class="info">
+        <h1 id="title">{titre}</h1>
+
+        <div class="row">
+          <div class="price" id="ad-price">{prix} Fc</div>
+          <div class="badges" aria-hidden="true">
+            <div class="badge-pill" id="ad-condition">Neuf</div>
+            <div class="badge-pill" id="ad-category">{categorie}</div>
+          </div>
+        </div>
+
+        <div class="location" id="ad-location">
+            Lieu de vente : <strong id="ad-district">{district}</strong>, <strong id="ad-commune">{commune}</strong>
+            
+        </div>
+
+        <div class="description">
+          <h3>Description</h3>
+          <div class="desc-content" id="desc-content">{description}</div>
+        </div>
+
+         <button class="contact-btn" id="contactBtn">Contacter le vendeur</button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- floating contact card -->
+  <div class="contact-float" id="contactFloat" aria-hidden="true">
+    <div class="title" id="sellerName">Nom vendeur</div>
+    <div class="phone" id="sellerPhone">+243 000 000 000</div>
+    <div class="actions">
+      <a id="callLink" class="call-link" href="#">Appeler</a>
+      <button class="close" id="closeContact">Fermer</button>
+    </div>
+  </div>
+
+  <script>
+    // Données d'exemple (remplace par templating serveur)
+    const ad = {
+      id: '1782004587884',
+      title: 'Téléphone Samsung Galaxy',
+      price: '120000',
+      district: 'Kasa-Vubu',
+      commune: 'Bandalungwa',
+      condition: 'Occasion',
+      category: 'Téléphone',
+      description: 'Téléphone en bon état, batterie 80%, vendu avec chargeur.',
+      images: [
+        '/Annonces-img/{id}-0.png',
+        '/Annonces-img/{id}-1.png',
+        '/Annonces-img/{id}-2.png'
+      ],
+      seller: {
+        name: 'Jean Mbala',
+        phone: '+243812345678'
+      }
+    };
+
+    // DOM refs
+    const preview = document.getElementById('preview');
+    const counter = document.getElementById('counter');
+    const thumbs = document.getElementById('thumbs');
+    const titleEl = document.getElementById('title');
+    const priceEl = document.getElementById('ad-price');
+    const districtEl = document.getElementById('ad-district');
+    const communeEl = document.getElementById('ad-commune');
+    const condEl = document.getElementById('ad-condition');
+    const catEl = document.getElementById('ad-category');
+    const descEl = document.getElementById('desc-content');
+
+    const contactBtn = document.getElementById('contactBtn');
+    const contactFloat = document.getElementById('contactFloat');
+    const sellerName = document.getElementById('sellerName');
+    const sellerPhone = document.getElementById('sellerPhone');
+    const callLink = document.getElementById('callLink');
+    const closeContact = document.getElementById('closeContact');
+
+
+
+    // Build thumbnails
+    function buildThumbs(images) {
+      thumbs.innerHTML = '';
+      images.forEach((src, i) => {
+        const el = document.createElement('div');
+        el.className = 'thumb';
+        el.style.backgroundImage = `url("${src}")`;
+        el.tabIndex = 0;
+        el.addEventListener('click', () => setMain(i));
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setMain(i); }
+        });
+        thumbs.appendChild(el);
+      });
+      setMain(0);
+    }
+
+    function setMain(index) {
+      const src = ad.images[index] || '';
+      preview.style.backgroundImage = src ? `url("${src}")` : '';
+      counter.textContent = (index + 1) + ' / ' + (ad.images.length || 1);
+      Array.from(thumbs.children).forEach((t, i) => t.classList.toggle('active', i === index));
+    }
+
+    if (ad.images && ad.images.length) buildThumbs(ad.images);
+
+    // Contact floating behavior
+    function showContact() {
+      contactFloat.classList.add('visible');
+      contactFloat.setAttribute('aria-hidden', 'false');
+    }
+    function hideContact() {
+      contactFloat.classList.remove('visible');
+      contactFloat.setAttribute('aria-hidden', 'true');
+    }
+
+    contactBtn.addEventListener('click', () => {
+      if (contactFloat.classList.contains('visible')) hideContact();
+      else showContact();
+    });
+
+    closeContact.addEventListener('click', hideContact);
+
+    // close on outside click
+    document.addEventListener('click', (e) => {
+      if (!contactFloat.contains(e.target) && !contactBtn.contains(e.target)) {
+        hideContact();
+      }
+    });
+
+    // keyboard accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') hideContact();
+    });
+  </script>
+</body>
+</html>
