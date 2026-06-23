@@ -17,7 +17,7 @@ async function chargeannonces() {
     let categorie  = prdt.categorie
 
     contenair.innerHTML +=
-      `<div class="carte_produit" data-id= "${id}" data-set = "${prix},${district},${localisation},${categorie}" >
+      `<div class="carte_produit" data-id= "${id}" data-set = "${prix},${district},${localisation},${categorie},${titre}" >
 
         <div class="cnt_img"><img src="${image_link}" alt="${titre}" loading="lazy">
           <button class="fav"><i class="fas fa-heart"></i></button>
@@ -98,6 +98,7 @@ function filtrage(){
   let filtre_actif = document.getElementsByClassName("active");
   filtre_actif = filtre_actif[0].textContent;
   
+  console.log(filtre_actif);
   let all_carte = document.querySelectorAll('.carte_produit');
 
   all_carte.forEach(carte => {
@@ -106,7 +107,17 @@ function filtrage(){
   })
 }
 
+document.getElementById("barsch").addEventListener("input", () => {
 
+    let cartes = document.querySelectorAll(".carte_produit");
+    filtrage();
+    
+    cartes.forEach( crt => {
+        if(!crt.dataset.set.includes(barsch.value)){
+            crt.style.display = "none";
+        }
+    })
+})
 
 document.getElementById("logos").addEventListener("click",() => { window.location.href = "accueil.html"})
 document.getElementById("login").addEventListener('click',() => { window.location.href = "Connexion.html"})
