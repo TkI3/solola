@@ -35,6 +35,8 @@ async function chargeannonces() {
   })
 
   document.querySelectorAll(".carte_produit").forEach(carte => carte.addEventListener("click",()=>{fetch(`/annonce?id=${carte.dataset.id}`.then(window.location.href = `/annonce?id=${carte.dataset.id}`))}));
+
+  bar_accueil();
   
   ;
 
@@ -106,18 +108,32 @@ function filtrage(){
     carte.style.display = filtre_actif === "Nionso"|| delta.includes(filtre_actif) ? "block" : "none";
   })
 }
-
-document.getElementById("barsch").addEventListener("input", () => {
+function search(){
 
     let cartes = document.querySelectorAll(".carte_produit");
+    let current_search = barsch.value.toLowerCase();
+
+
     filtrage();
-    
+
     cartes.forEach( crt => {
-        if(!crt.dataset.set.includes(barsch.value)){
+        if(!crt.dataset.set.toLowerCase().includes(current_search)){
             crt.style.display = "none";
         }
     })
-})
+}
+
+function bar_accueil(){
+
+    let ul  = new URL(document.URL);
+
+    if(ul.searchParams.get("search")){;
+        document.getElementById("barsch").value = ul.searchParams.get("search");
+        search();
+    }
+}
+//Barre  de recherche 
+document.getElementById("barsch").addEventListener("input", search)
 
 document.getElementById("logos").addEventListener("click",() => { window.location.href = "accueil.html"})
 document.getElementById("login").addEventListener('click',() => { window.location.href = "Connexion.html"})
@@ -126,3 +142,6 @@ document.getElementById("select").addEventListener("change", categorisation);
 
 chargeannonces();
 CreateFilters();
+bar_accueil();
+search();
+
