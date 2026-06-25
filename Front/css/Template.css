@@ -15,7 +15,7 @@
     * { box-sizing: border-box; font-family: 'Inter', system-ui, sans-serif; margin: 0px;}
 
     body{
-      background-image: url("../assets/image-de-fonds.png");
+      background-image: url("../assets/image-de-fonds.webp");
       display: flex;
       height: fit-content;
       align-items: center;

@@ -10,16 +10,16 @@ function getAnId(){
   return id_compt;
 }
 
-const port= Number(process.env.PORT || 8080);
+const port= Number(process.env.PORT || 3000);
 serve({
 
-  port,
-  
-  //hostname: "localhost",
+  port: 3000,
+  hostname: "localhost",
 
   routes:{
     
     "/Annonces-img/*": req => {const url = new URL(req.url);  return new Response(file(`.${url.pathname}`))},
+    "/assets/*": req => {const url = new URL(req.url);  return new Response(file(`Front${url.pathname}`),{headers:{"Cache-Control":"public,max-age=3153600"}})},
    
   },
 
